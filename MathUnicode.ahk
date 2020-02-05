@@ -3,10 +3,12 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+; subtext shorthand
 :*b0?:_::
     SendInput {BS}^{+}
     return
 
+; supertext shorthand
 :*b0?:^^::
     SendInput {BS 2}^+{+}
     return
@@ -17,6 +19,7 @@ replaceWithUnicode(C)
 }
 
 
+; Hotstring replacements
 :b0CX:\alpha::replaceWithUnicode("α")
 :b0CX:\iota::replaceWithUnicode("ι")
 :b0CX:\varrho::replaceWithUnicode("ϱ")
